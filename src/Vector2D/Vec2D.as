@@ -1,6 +1,6 @@
 package Vector2D 
 {
-  import flash.geom.Point;
+	import flash.geom.Point;
 	/**
 	 * ...
 	 * @author Miguel Murça

@@ -1,6 +1,6 @@
 package  
 {
-  import flash.display.Sprite;
+	import flash.display.Sprite;
 	import flash.geom.Point;
 	import Vector2D.Vec2D;
 	/**

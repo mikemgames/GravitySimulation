@@ -1,6 +1,6 @@
 package 
 {
-  import flash.display.Sprite;
+	import flash.display.Sprite;
 	import flash.events.Event;
 	
 	/**
