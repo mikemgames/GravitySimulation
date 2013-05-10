@@ -1,4 +1,4 @@
-package Vector2D 
+package Vector2D
 {
 	import flash.geom.Point;
 	/**
@@ -7,7 +7,6 @@ package Vector2D
 	 */
 	public class Vec2D extends Point
 	{
-		
 		public function Vec2D(x:Number = 0, y:Number = 0) 
 		{
 			super(x, y);

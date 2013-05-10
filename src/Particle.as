@@ -1,5 +1,7 @@
 package  
 {
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
 	import flash.display.Sprite;
 	import flash.geom.Point;
 	import Vector2D.Vec2D;
@@ -9,9 +11,9 @@ package
 	 */
 	public class Particle extends Sprite
 	{
-		public static var ParticlePos:Point;
-		public static var gravitationalConstant:Number = 750;
+		public static const gravitationalConstant:Number = 750; //'Cause it's pixels baby
 		
+		public var ParticlePos:Point;
 		private var mass:Number;
 		private var movement:Vec2D;
 		
@@ -60,16 +62,16 @@ package
 				acceleration.changeLength(direction, accelerationLength);
 			}
 			var friction:Vec2D = new Vec2D();
-			if (acceleration.x == 0 && acceleration.y == 0) {
+			if (movement.x == 0 && movement.y == 0) {
 				friction.zero() 
 			} else {
-				friction.changeLength(direction.ReturnMultiplied(-1), 0.1);
+				friction.changeLength(direction.ReturnMultiplied(-1), 1/this.GetMass()*10); //Just... Don't ask.
 			}
 			
 			movement.addVector(acceleration);
 			movement.subtractVector(friction);
 			
-			trace(acceleration);
+			//trace(acceleration);
 		}
 	}
 
